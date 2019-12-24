@@ -41,6 +41,9 @@ spec:
       labels:
         name: airflow
     spec:
+      selector:
+        matchLabels:
+          app: airflow
       initContainers:
       - name: "init"
         image: {{AIRFLOW_IMAGE}}:{{AIRFLOW_TAG}}

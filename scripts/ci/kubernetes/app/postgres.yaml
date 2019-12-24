@@ -27,6 +27,9 @@ spec:
         name: postgres-airflow
     spec:
       restartPolicy: Always
+      selector:
+        matchLabels:
+          app: postgres-airflow
       containers:
         - name: postgres
           image: postgres
